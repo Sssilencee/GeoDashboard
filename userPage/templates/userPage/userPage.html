@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Geo Dashboard</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<link rel="icon" href="{% static "userPage/img/icon.png" %}">
+		<link rel="stylesheet" href="{% static "userPage/css/userPage.css" %}" type="text/css"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<script src="{% static "userPage/js/jquery.js" %}"></script>
+		<script src="{% static "userPage/js/jquery.cookie-1.4.1.min.js" %}"></script>
+		<script src="{% static "userPage/js/jquery-ui.js" %}"></script>
+		<script src="{% static "userPage/js/userPage.js" %}"></script>
+
+		<div id="exportData" user-subscriptions = "{{ userSubscriptions }}" user-data = "{{ userData }}"></div>
+		<script>
+			window['USER_SUBSCRIPTIONS'] = JSON.parse(
+				document.getElementById('exportData').getAttribute('user-subscriptions')
+			)
+			window['USER_DATA'] = JSON.parse(
+				document.getElementById('exportData').getAttribute('user-data')
+			)
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id = "auth">
+
+			<p id="logInHeader">Please log in with your<br>Discord account</p>
+			<button id = "logIn">Log in</button>
+
+			<img src="{% static "userPage/img/icontext.svg" %}" id="logInIcon"/>
+
+		</div>
+
+		<div id = "home">
+			<div id="header">
+
+				<p id = "discordLogin"></p>
+				<img id="profileImage"/>
+
+				<button id = "logOut">Log out</button>
+
+				<p id = "mainHeader">Your subscriptions</p>
+
+			</div>
+	  </div>
+
+		<div id = "loading"></div>
+
+	</body>
+</html>
