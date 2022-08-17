@@ -20,8 +20,8 @@ from adminPage.models import UnbindDiscordKeys
 
 
 DISCORD_AUTH = 'https://discord.com/api/oauth2/authorize?client_id=857571464319860767&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Flogin&response_type=code&scope=identify%20guilds%20email'
-CLIENT_ID = '857571464319860767'
-CLIENT_SECRET = 'FByG_IPnCsSbyV8kaqovpgBj2E_5D9zL'
+CLIENT_ID = ''
+CLIENT_SECRET = ''
 
 HOME_PAGE = 'http://127.0.0.1:8000'
 LOGIN_PAGE = 'http://127.0.0.1:8000/login'
