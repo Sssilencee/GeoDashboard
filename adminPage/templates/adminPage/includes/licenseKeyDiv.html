@@ -1,0 +1,14 @@
+{% block licenseKeyDiv %}
+  {% for element in licenseKeysData %}
+    <div id=licenseKeyDiv class="mt-3 row">
+
+      <p class="licenseKeyDivElement col" id="discordIdElement">{{ element.discord_id }}</p>
+      <p class="licenseKeyDivElement col" id="licenseKeyElement">{{ element.license_key }}</p>
+      <p class="licenseKeyDivElement col" id="toolElement">{{ element.tool }}</p>
+      <p class="licenseKeyDivElement col" id="renewalPriceElement">{{ element.devices }}</p>
+
+      <button class="licenseKeyDivElement delete" id = "delete" data = "{{ element.license_key }}">Delete</button>
+      
+    </div>
+  {% endfor %}
+{% endblock %}

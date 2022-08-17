@@ -1,0 +1,13 @@
+{% block invitesDiv %}
+  {% for element in invitesData %}
+    <div id=invitesDiv class="mt-3 row">
+
+      <p class="invitesDivElement col" id="privateLinkElement">{{ element.private_link }}</p>
+      <p class="invitesDivElement col" id="publicLinkElement">{{ element.public_link }}</p>
+      <p class="invitesDivElement col" id="groupElement">{{ element.group }}</p>
+
+      <button class="invitesDivElement deleteinvites" id = "deleteinvites" data = "{{ element.public_link }}">Delete</button>
+      
+    </div>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,543 @@
+html, body  {padding:0; margin:0;}
+
+html  {
+  height: 100%;
+}
+body {
+  background-image: url(http://127.0.0.1:8000/static/userPage/img/bg.png);
+  background-size: cover;
+
+  height: 100%;
+}
+
+body::-webkit-scrollbar  {
+  width: 10px;
+}
+body::-webkit-scrollbar-track  {
+  background: #1A1A1A;
+}
+body::-webkit-scrollbar-thumb  {
+  background-color: #4D4D4D;
+  
+  border-radius: 20px;
+  border: 3px solid #1A1A1A;
+}
+
+@font-face  {
+    font-family: Roboto-Regular;
+    src: local(Roboto-Regular), url(../fonts/Roboto-Regular.ttf);
+}
+@font-face  {
+    font-family: Roboto-Bold;
+    src: local(Roboto-Bold), url(../fonts/Roboto-Bold.ttf);
+}
+@font-face  {
+    font-family: Roboto-Medium;
+    src: local(Roboto-Medium), url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face  {
+    font-family: ProximaNova-Semibold;
+    src: local(ProximaNova-Semibold), url(../fonts/ProximaNova-Semibold.ttf);
+}
+@font-face  {
+    font-family: ProximaNova-Bold;
+    src: local(ProximaNova-Bold), url(../fonts/ProximaNova-Bold.ttf);
+}
+@font-face  {
+    font-family: ProximaNova-Regular;
+    src: local(ProximaNova-Regular), url(../fonts/ProximaNova-Regular.ttf);
+}
+@font-face  {
+    font-family: ProximaNova-Black;
+    src: local(ProximaNova-Black), url(../fonts/ProximaNova-Black.ttf);
+}
+
+#logInHeader {
+  position: absolute;
+
+  top: 40px;
+  left: 85px;
+
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 78pt;
+
+  color: #FFFFFF;
+}
+#logIn {
+  position: absolute;
+
+  top: 380px;
+  left: 85px;
+
+  width: 140pt;
+  height: 45pt;
+
+  border: none;
+  border-radius: 12pt;
+
+  outline: none;
+  cursor: pointer;
+
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 20pt;
+
+  background-color: #a96cff;
+
+  color: #FFFFFF;
+}
+#logIn:hover {
+  background-color: #9067f4;
+}
+#logInIcon {
+  position: absolute;
+
+  right: 60px;
+  bottom: 10px;
+
+  height: 120px;
+  width: auto;
+
+  font-family: ProximaNova-Black, sans-serif;
+}
+
+#profileImage {
+  position: absolute;
+
+  left: 60px;
+  top: 35px;
+
+  width: 41px;
+  height: 41px;
+
+  border-radius: 50%;
+}
+#discordLogin {
+  position: absolute;
+
+  top: 40px;
+  left: 130px;
+
+  font-family: ProximaNova-Semibold, sans-serif;
+	font-size: 20px;
+
+  color: #B3B3B3;
+}
+#logOut {
+  position: absolute;
+
+  top: 40px;
+  right: 60px;
+
+  border: none;
+  cursor: pointer;
+
+	font-family: ProximaNova-Semibold, sans-serif;
+	font-size: 20px;
+
+  background-color: #1A1A1A;
+
+  color: #B3B3B3;
+}
+
+#mainHeader {
+  position: absolute;
+
+  top: 120px;
+  left: 60px;
+
+  font-family: ProximaNova-Bold, sans-serif;
+	font-size: 30px;
+
+  color: #B3B3B3;
+}
+#mainHeaderInvites {
+  position: absolute;
+
+  top: 120px;
+  left: 60px;
+
+  font-family: ProximaNova-Bold, sans-serif;
+	font-size: 30px;
+
+  color: #B3B3B3;
+
+  display: none;
+}
+
+#container {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+#bindNewKey {
+  position: absolute;
+
+  top: 40px;
+  right: 200px;
+
+  border: none;
+  cursor: pointer;
+
+	font-family: ProximaNova-Semibold, sans-serif;
+	font-size: 20px;
+
+  background-color: #1A1A1A;
+
+  color: #B3B3B3;
+}
+#createInviteButton {
+  position: absolute;
+
+  top: 40px;
+  right: 400px;
+
+  border: none;
+  cursor: pointer;
+
+  font-family: ProximaNova-Semibold, sans-serif;
+  font-size: 20px;
+
+  background-color: #1A1A1A;
+
+  color: #B3B3B3;
+}
+
+#menuKeys {
+  position: absolute;
+
+  top: 40px;
+  left: 250px;
+
+  border: none;
+  cursor: pointer;
+
+  font-family: ProximaNova-Semibold, sans-serif;
+  font-size: 20px;
+
+  background-color: #1A1A1A;
+
+  color: #FFFFFF;
+}
+#menuInvites {
+  position: absolute;
+
+  top: 40px;
+  left: 350px;
+
+  border: none;
+  cursor: pointer;
+
+  font-family: ProximaNova-Semibold, sans-serif;
+  font-size: 20px;
+
+  background-color: #1A1A1A;
+
+  color: #B3B3B3;
+}
+
+#invites  {
+  position: relative;
+
+  top: 220px;
+
+  display: none;
+}
+
+#blur {
+  position: absolute;
+
+  z-index: 1;
+  opacity: 90%;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000;
+}
+#bindKeyWindow {
+  position: relative;
+
+  top: 175px;
+
+  z-index: 2;
+
+  margin: auto;
+
+  width: 644px;
+
+  pointer-events: all;
+
+  display: none;
+}
+#createInvite {
+  position: relative;
+
+  top: 175px;
+
+  z-index: 2;
+
+  margin: auto;
+
+  width: 644px;
+
+  pointer-events:all;
+
+  display: none;
+}
+
+#row2 {
+  position: relative;
+
+  top: 118px;
+}
+#row3 {
+  position: relative;
+
+  top: 138px;
+}
+
+.inputKeyWindow {
+  width: 310px;
+  height: 38px;
+
+  padding-left: 10px;
+
+  border: None;
+  border-radius: 5px;
+
+  appearance: none;
+	outline: None;
+
+	font-size: 14px;
+	font-family: ProximaNova-Semibold, sans-serif;
+
+  background-color: #333333;
+
+  color: #999999;
+}
+
+#submitKeyWindow {
+	position: absolute;
+
+  top: 176px;
+  right: 0px;
+
+	height: 38px;
+  width: 100px;
+
+	border: none;
+  border-radius: 5px;
+
+  outline: none;
+  cursor: pointer;
+
+	font-family: ProximaNova-Semibold, sans-serif;
+	font-size: 11pt;
+
+  background-color: #FFD500;
+
+	color: #FFFFFF;
+}
+#submitKeyWindow:active {
+	background-color: #E8BB00;
+}
+
+#submitKeyWindowInvite {
+	position: absolute;
+
+	height: 38px;
+  width: 100px;
+
+	border: none;
+  border-radius: 5px;
+
+  outline: none;
+  cursor: pointer;
+
+	font-family: ProximaNova-Semibold, sans-serif;
+	font-size: 11pt;
+
+  background-color: #FFD500;
+
+	color: #FFFFFF;
+}
+#submitKeyWindowInvite:active {
+	background-color: #E8BB00;
+}
+
+#bindKeyWindowHeader {
+  position: absolute;
+
+  top: 0px;
+
+  font-family: ProximaNova-Bold, sans-serif;
+	font-size: 30px;
+
+  color: #B3B3B3;
+}
+#loading {
+  position: absolute;
+
+  top: 0px;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #1A1A1A;
+}
+#mainData {
+  position: relative;
+
+  top: 220px;
+}
+
+#licenseKeyDiv {
+  position: relative;
+
+  margin: auto;
+
+  width: 85%;
+  height: 60px;
+
+  border-radius: 10px;
+
+  background-color: #333333;
+}
+.licenseKeyDivElement {
+  position: relative;
+
+  top: 18px;
+
+  margin-left: 45px;
+  margin-top: auto;
+  margin-bottom: : auto;
+
+  font-family: ProximaNova-Semibold, sans-serif;
+	font-size: 16px;
+
+  color: #FFFFFF;
+}
+
+#invitesDiv {
+  position: relative;
+
+  margin: auto;
+
+  width: 85%;
+  height: 60px;
+
+  border-radius: 10px;
+
+  background-color: #333333;
+}
+.invitesDivElement {
+  position: relative;
+
+  top: 17px;
+
+  margin-left: 45px;
+  margin-top: auto;
+  margin-bottom: : auto;
+
+  font-family: ProximaNova-Semibold, sans-serif;
+	font-size: 16px;
+
+  color: #FFFFFF;
+}
+
+#renewalPriceElement {
+  margin-left: -180px
+}
+#licenseKeyElement {
+  margin-left: -120px
+}
+#toolElement {
+  margin-left: -110px
+}
+
+#keysLine {
+    position: absolute;
+
+    top: 100px;
+    left: 225px;
+
+    width: 100px;
+    height: 1px;
+
+    background-color: #ffef08;
+}
+#invitesLine {
+  position: absolute;
+
+  top: 100px;
+  left: 335px;
+
+  width: 100px;
+  height: 1px;
+
+  background-color: #ffef08;
+
+  display: none;
+}
+
+#delete {
+  position: absolute;
+
+  top: 0px;
+  right: 90px;
+
+  width: 30px;
+  height: 59px;
+
+  border: none;
+  background: None;
+
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 16px;
+
+  color: #ff4d4d;
+}
+#deleteinvites {
+  position: absolute;
+
+  top: 0px;
+  right: 90px;
+
+  width: 30px;
+  height: 59px;
+
+  border: none;
+  background: None;
+
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 16px;
+
+  color: #ff4d4d;
+}
+
+.mainDataDescription {
+  position: absolute;
+
+  top: -40px;
+
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 16px;
+
+  color: #808080;
+}
+.invitesDescription {
+  position: absolute;
+
+  top: -40px;
+
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 16px;
+
+  color: #808080;
+}
